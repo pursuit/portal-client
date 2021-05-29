@@ -1,0 +1,17 @@
+<p>register!</p>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+	<div *ngIf="submitMsg">
+		{{submitMsg}}
+	</div>
+
+	<div>
+		<label>Username</label>
+		<input name="username" type="text" [(ngModel)]="registration.username">
+	</div>
+	<div>
+		<label>Password</label>
+		<input name="password" type="password" [(ngModel)]="registration.password">
+	</div>
+	<button type="submit">Submit</button>
+</form>
